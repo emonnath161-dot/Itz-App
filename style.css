@@ -1,3 +1,13 @@
+/* গুগল ফন্ট থেকে বাংলা সাপোর্ট যুক্ত করা */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap');
+
+* {
+    font-family: 'Hind Siliguri', sans-serif !important;
+}
+
+
+
+
 /* ১. গ্লোবাল সেটিংস এবং কালার স্কিম */
 :root {
     --bg-color: #0b0c10;      /* মেইন ব্যাকগ্রাউন্ড */
