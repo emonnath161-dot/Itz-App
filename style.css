@@ -1,0 +1,202 @@
+/* ১. গ্লোবাল সেটিংস এবং কালার স্কিম */
+:root {
+    --bg-color: #0b0c10;      /* মেইন ব্যাকগ্রাউন্ড */
+    --card-bg: #1f2833;      /* অ্যাপ কার্ডের রঙ */
+    --primary-accent: #66fcf1; /* নিয়ন সায়ান হাইলাইট কালার */
+    --text-white: #ffffff;
+    --text-dim: #c5c6c7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-white);
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+/* ২. হেডার এবং সার্চ বক্স */
+header {
+    background: linear-gradient(to bottom, #1f2833, transparent);
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.logo-area h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: var(--primary-accent);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    background-color: #161b22;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-container input:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.2);
+}
+
+/* ৩. স্লাইডিং টেক্সট (News Ticker) */
+.news-ticker {
+    width: 100%;
+    background: rgba(31, 40, 51, 0.5);
+    padding: 10px 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(102, 252, 241, 0.1);
+    border-bottom: 1px solid rgba(102, 252, 241, 0.1);
+    margin: 10px 0;
+}
+
+.ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    color: var(--primary-accent);
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 100%;
+    animation: scroll-text 18s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.news-ticker:hover .ticker-content {
+    animation-play-state: paused; /* মাউস নিলে লেখা থেমে যাবে */
+}
+
+/* ৪. অ্যাপ গ্রিড (মোবাইলে পাশাপাশি ২টি) */
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* পাশাপাশি ২টি অ্যাপ */
+    gap: 12px;
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ৫. অ্যাপ কার্ড স্টাইল */
+.app-card {
+    background-color: var(--card-bg);
+    border-radius: 18px;
+    padding: 20px 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-accent);
+}
+
+.app-icon {
+    width: 70px;
+    height: 70px;
+    background: #0b0c10;
+    border-radius: 15px;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 1px solid rgba(102, 252, 241, 0.2);
+}
+
+.app-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app-desc {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 15px;
+    height: 35px;
+    overflow: hidden;
+}
+
+.download-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: 1.5px solid var(--primary-accent);
+    color: var(--primary-accent);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: var(--primary-accent);
+    color: #0b0c10;
+}
+
+/* ৬. পেজিনেশন (Next/Previous Button) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.pagination button {
+    padding: 12px 25px;
+    background-color: var(--primary-accent);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #0b0c10;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pagination button:disabled {
+    background-color: #444;
+    color: #888;
+    cursor: not-allowed;
+}
+
+#pageNumber {
+    font-weight: bold;
+    color: var(--primary-accent);
+}
+
+/* ৭. বড় স্ক্রিনের জন্য অ্যাডজাস্টমেন্ট (পিসি/ট্যাবলেট) */
+@media (min-width: 768px) {
+    .app-grid {
+        grid-template-columns: repeat(4, 1fr); /* পিসিতে ৪টি করে অ্যাপ দেখাবে */
+    }
+}
