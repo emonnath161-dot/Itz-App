@@ -3,38 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXGENSTORE - Premium Apps</title>
+    <title>NEXGENSTORE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
         <div class="logo">NEXGEN<span>STORE</span></div>
-        
-        <div class="nav-icons">
-            <div class="menu-icon" onclick="toggleMenu()" style="cursor: pointer; font-size: 24px;">
-                👨‍🦱
-            </div>
-        </div>
+        <div class="menu-icon" onclick="toggleMenu()">👨‍🦱</div>
     </header>
 
     <div id="sideMenu" class="side-nav">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-        <div class="menu-content">
+        <span class="closebtn" onclick="toggleMenu()">&times;</span>
+        <div class="menu-links">
             <a href="index.html">🏠 হোম পেজ</a>
-            <a href="#how-to-download">▶️ টিউটোরিয়াল ভিডিও</a>
-            <a href="#developer-info">👤 ডেভেলপার প্রোফাইল</a>
+            <a href="#">▶️ টিউটোরিয়াল ভিডিও</a>
+            <a href="#">👤 ডেভেলপার প্রোফাইল</a>
             <a href="https://t.me/yourid" target="_blank">✈️ টেলিগ্রাম সাপোর্ট</a>
         </div>
     </div>
 
     <div class="notice-bar">
-        <marquee behavior="scroll" direction="left">
-            স্বাগতম NEXGENSTORE-এ! আমাদের সব প্রিমিয়াম অ্যাপ এবং VIP Proxy এখন একদম ফ্রিতে ডাউনলোড করুন।
-        </marquee>
+        <marquee>স্বাগতম NEXGENSTORE-এ! আমাদের সব প্রিমিয়াম অ্যাপ এবং VIP Proxy এখন একদম ফ্রিতে ডাউনলোড করুন।</marquee>
     </div>
 
-    
+    <div class="ad-container"><div class="ad-placeholder">Top Banner Ad</div></div>
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="অ্যাপ খুঁজুন...">
@@ -43,13 +36,9 @@
     <main id="apps" class="app-grid">
         </main>
 
-    <div class="ad-container">
-        <div class="ad-placeholder">Footer Banner Ad</div>
-    </div>
+    <div class="ad-container"><div class="ad-placeholder">Footer Banner Ad</div></div>
 
-    <footer>
-        <p>&copy; 2026 NEXGENSTORE | All Rights Reserved.</p>
-    </footer>
+    <footer><p>© 2026 NEXGENSTORE | All Rights Reserved.</p></footer>
 
     <script>
         function toggleMenu() {
@@ -61,7 +50,6 @@
             }
         }
     </script>
-
     <script src="script.js"></script>
 </body>
 </html>
