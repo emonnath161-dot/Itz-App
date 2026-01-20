@@ -3,41 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium App Store</title>
+    <title>NEXGENSTORE - Premium Apps</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo-area">
-            <h1><span>⚜️ It'z STORE ⚜️</span></h1>
-        </div>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="অ্যাপ সার্চ করুন ...">
+    <header class="navbar">
+        <div class="logo">NEXGEN<span>STORE</span></div>
+        
+        <div class="nav-icons">
+            <div class="menu-icon" onclick="toggleMenu()" style="cursor: pointer; font-size: 24px;">
+                👨‍🦱
+            </div>
         </div>
     </header>
 
-<div class="news-ticker">
-    <div class="ticker-content">
-        প্রয়োজনীয় সকল মোড অ্যাপস পেতে প্রতিদিন আমাদের ওয়েবসাইটের সাথে থাকুন
-    </div>
-</div>
-
-
-    <div class="app-grid" id="appGrid">
+    <div id="sideMenu" class="side-nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <div class="menu-content">
+            <a href="index.html">🏠 হোম পেজ</a>
+            <a href="#how-to-download">▶️ টিউটোরিয়াল ভিডিও</a>
+            <a href="#developer-info">👤 ডেভেলপার প্রোফাইল</a>
+            <a href="https://t.me/yourid" target="_blank">✈️ টেলিগ্রাম সাপোর্ট</a>
         </div>
-
-    <div class="pagination">
-        <button id="prevBtn" disabled>Previous</button>
-        <span id="pageNumber">Page 1</span>
-        <button id="nextBtn">Next</button>
     </div>
+
+    <div class="notice-bar">
+        <marquee behavior="scroll" direction="left">
+            স্বাগতম NEXGENSTORE-এ! আমাদের সব প্রিমিয়াম অ্যাপ এবং VIP Proxy এখন একদম ফ্রিতে ডাউনলোড করুন।
+        </marquee>
+    </div>
+
+    
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="অ্যাপ খুঁজুন...">
+    </div>
+
+    <main id="apps" class="app-grid">
+        </main>
+
+    <div class="ad-container">
+        <div class="ad-placeholder">Footer Banner Ad</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NEXGENSTORE | All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("sideMenu");
+            if (menu.style.width === "250px") {
+                menu.style.width = "0";
+            } else {
+                menu.style.width = "250px";
+            }
+        }
+    </script>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
